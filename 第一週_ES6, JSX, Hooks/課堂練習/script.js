@@ -120,9 +120,17 @@ const numbers = [1, 2, 3, 4, 5];
 const numberList = numbers.map((number, i) => <li key={ i }>{ number }</li>
 );
 
-console.log(numberList)
+// console.log(numberList)
 
-part6.render(<ul>{ numberList }</ul>);
+//  如果只需要印出ul
+// part6.render(<ul>{ numberList }</ul>);
+// 需要多加分隔線的話，render裡面還是需要用元件的寫法，加<></>包起來
+part6.render(
+    <>
+        <ul>{numberList}</ul>
+        <hr />
+    </>
+);
 
 
 // 10. 元件設計 - map 寫法 I(加不加小刮號差別)
@@ -135,6 +143,52 @@ part6.render(<ul>{ numberList }</ul>);
 // })
 // 以上這些是JS內建支援的語法
 
+
 // 11. 元件設計 - map 寫法 II 物件作法
+// 針對物件array的寫法，取出每個物件裡面的特定值
+const part7 = ReactDOM.createRoot(document.getElementById("part7"));
+
+const namesAndNunbers = [
+    {
+        num: 1,
+        name: "Tom Durdon"
+    },
+    {
+        num: 2,
+        name: "Jack Jonhson"
+    },
+    {
+        num: 3,
+        name: "Mary Jane"
+    },
+];
+
+const infoList = namesAndNunbers.map((item, i) => 
+    <li key={i}>這位是 { item.name }，編號第 { item.num } 號</li>
+);
+part7.render(
+    <>
+        <ol>{infoList}</ol>
+        <hr />
+    </>,
+);
 // 12. 元件設計 - map 寫法 III
 //
+const part8 = ReactDOM.createRoot(document.getElementById("part8"));
+
+function Welcome(props) {
+    return (
+        <h4>歡迎 { props.item.num } 號同學 { props.item.name } !</h4>
+    );
+};
+
+function App2() {
+    return (
+        <>
+            { namesAndNunbers.map((item, i) => <Welcome key={i} item={item}/>) }
+            <hr />  
+        </>
+    );
+};
+
+part8.render(<App2/>)
