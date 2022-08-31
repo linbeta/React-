@@ -9,4 +9,5 @@
 - 8/9 每日任務 Day7：[元件建立](https://hackmd.io/gORV81mjQWmnviYie2XBnw?view)
 - 8/10 每日任務 Day8：[元件整合練習](https://hackmd.io/K62fIzZeTRi8r7UxSXvp0w?view)
 - 8/11 每日任務 Day9：[元件 props 資料傳遞](https://hackmd.io/4xV05GEoQECiEI3lkVKzLA?view)
-- 8/12 每日任務 Day10：[元件陣列資料 props 傳遞](https://hackmd.io/1gouMJamQj6zQSX-Ym04cg?view) 
+- 8/12 每日任務 Day10：[元件陣列資料 props 傳遞](https://hackmd.io/1gouMJamQj6zQSX-Ym04cg?view)
+
