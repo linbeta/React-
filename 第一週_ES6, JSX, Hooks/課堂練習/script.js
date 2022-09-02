@@ -151,7 +151,7 @@ const part7 = ReactDOM.createRoot(document.getElementById("part7"));
 const namesAndNunbers = [
     {
         num: 1,
-        name: "Tom Durdon"
+        name: "Tyler Durden"
     },
     {
         num: 2,
@@ -192,3 +192,21 @@ function App2() {
 };
 
 part8.render(<App2/>)
+
+// 13. 元件設計 - 變數更新，render沒有顯示
+const part9 = ReactDOM.createRoot(document.getElementById("part9"));
+
+function MyDrinksNew2(props) {
+    let orderNum = 1;
+    return (
+        <>
+            <h4>{ props.who } 點了 { orderNum } 杯{ props.drink }</h4>
+            <input type="button" value="再點一杯" onClick={()=> { 
+                orderNum=orderNum+1;
+                console.log(orderNum);}}/>
+        </>
+    );
+}
+
+const element3 = <MyDrinksNew2 who="Beta" drink="咖啡"></MyDrinksNew2>
+part9.render(element3);
